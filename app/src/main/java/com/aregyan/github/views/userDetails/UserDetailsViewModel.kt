@@ -19,6 +19,7 @@ class UserDetailsViewModel @Inject constructor(
 
     fun getUserDetails(user: String) = userDetailsRepository.getUserDetails(user)
 
+
     fun refreshUserDetails(user: String) = viewModelScope.launch(Dispatchers.IO) {
         userDetailsRepository.refreshUserDetails(user)
     }
